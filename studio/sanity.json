@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "uniswap-clone"
+    "name": "uniswap-blockchainapp"
   },
   "api": {
-    "projectId": "nw03is8d",
+    "projectId": "a1ay68mu",
     "dataset": "production"
   },
   "plugins": [

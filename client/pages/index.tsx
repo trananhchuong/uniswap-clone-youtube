@@ -12,7 +12,7 @@ const Home: NextPage = () => {
     <div className={style.wrapper}>
       <Header />
       <Main />
-      <TransactionHistory />
+      {/* <TransactionHistory /> */}
     </div>
   )
 }

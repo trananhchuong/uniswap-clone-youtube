@@ -94,7 +94,6 @@ export const TransactionProvider = ({ children }) => {
       if (!metamask) return alert('Please install metamask ')
 
       const accounts = await metamask.request({ method: 'eth_requestAccounts' })
-
       setCurrentAccount(accounts[0])
     } catch (error) {
       console.error(error)
@@ -155,9 +154,11 @@ export const TransactionProvider = ({ children }) => {
     try {
       if (!metamask) return alert('Please install metamask ')
       const { addressTo, amount } = formData
+      console.log("🚀 ~ file: TransactionContext.js ~ line 157 ~ TransactionProvider ~ amount", amount)
       const transactionContract = getEthereumContract()
 
       const parsedAmount = ethers.utils.parseEther(amount)
+      console.log("🚀 ~ file: TransactionContext.js ~ line 160 ~ TransactionProvider ~ parsedAmount", parsedAmount)
 
       await metamask.request({
         method: 'eth_sendTransaction',
